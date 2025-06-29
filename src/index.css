@@ -81,7 +81,7 @@ a {
 }
 
 /* Media Queries */
-@media (min-width: 1366px) {
+/* @media (min-width: 1366px) {
 
     .container,
     .container-lg,
@@ -91,7 +91,26 @@ a {
     .container-xxl {
         max-width: 1440px;
     }
+} */
+@media (min-width: 1200px) and (max-width:1366px){
+.container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1250px;
+    }
+    .cards-grid{
+        max-width: 510px !important;
+        min-width: 510px !important;
+    }
+    .hero-section-card {
+    height: 225px !important; 
+    width: 190px !important;
 }
+}
+
 
 @media only screen and (max-width:1200px) {
     .h2 {
