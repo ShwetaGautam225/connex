@@ -2,6 +2,7 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    font-size: 14px;
 }
 
 .font-inter {
@@ -80,6 +81,23 @@ a {
     height: 110px;
 }
 
+.nav-link-custom {
+  position: relative;
+  color: #212529;
+  text-decoration: none;
+}
+
+.nav-link-custom.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 2px;
+  background:linear-gradient(0deg, #9EC43C -86.67%, #2E8B57 176.67%);
+}
+
 /* Media Queries */
 /* @media (min-width: 1366px) {
 
@@ -127,6 +145,9 @@ a {
 @media only screen and (max-width:991px) {
     .testimonial {
         padding: 20px 35px;
+    }
+      .list-unstyled span{
+        font-size: 16px !important;
     }
 }
 
@@ -400,4 +421,5 @@ a {
     .spacer {
         height: 50px;
     }
+  
 }

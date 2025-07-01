@@ -2,9 +2,12 @@ import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+  const location = useLocation();
+
   return (
     <Navbar
       collapseOnSelect
@@ -27,23 +30,29 @@ function Header() {
             <Nav.Link
               as={Link}
               to="/"
-              className="text-base fw-medium me-xl-4 me-lg-3"
               style={{ color: "#212529" }}
+              className={`text-base fw-medium me-xl-4 me-lg-3 nav-link-custom ${
+                location.pathname === "/" ? "active" : ""
+              }`}
             >
               Home
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/about"
-              className="text-base fw-medium me-xl-4 me-lg-3"
               style={{ color: "#212529" }}
+              className={`text-base fw-medium me-xl-4 me-lg-3 nav-link-custom ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
             >
               About Us
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/services"
-              className="text-base fw-medium me-xl-4 me-lg-3"
+              className={`text-base fw-medium me-xl-4 me-lg-3 nav-link-custom ${
+                location.pathname === "/services" ? "active" : ""
+              }`}
               style={{ color: "#212529" }}
             >
               Services
@@ -51,7 +60,9 @@ function Header() {
             <Nav.Link
               as={Link}
               to="/portfolio"
-              className="text-base fw-medium me-xl-4 me-lg-3"
+             className={`text-base fw-medium me-xl-4 me-lg-3 nav-link-custom ${
+                location.pathname === "/portfolio" ? "active" : ""
+              }`}
               style={{ color: "#212529" }}
             >
               Portfolio
@@ -59,7 +70,9 @@ function Header() {
             <Nav.Link
               as={Link}
               to="/internship"
-              className="text-base fw-medium me-xl-4 me-lg-3"
+              className={`text-base fw-medium me-xl-4 me-lg-3 nav-link-custom ${
+                location.pathname === "/internship" ? "active" : ""
+              }`}
               style={{ color: "#212529" }}
             >
               Internship
@@ -67,7 +80,9 @@ function Header() {
             <Nav.Link
               as={Link}
               to="/contact"
-              className="text-base fw-medium me-xl-4 me-lg-3"
+              className={`text-base fw-medium me-xl-4 me-lg-3 nav-link-custom ${
+                location.pathname === "/contact" ? "active" : ""
+              }`}
               style={{ color: "#212529" }}
             >
               Contact Us
