@@ -1,9 +1,27 @@
 .header {
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 50px 0px #EC008C0F;
+    background: #FFFFFF33;
     z-index: 50;
+    border: 2px solid #FFFFFF
 }
 
+.nav-link-custom {
+  position: relative;
+  color: #212529;
+  text-decoration: none;
+}
+
+.nav-link-custom.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 2px;
+  background:linear-gradient(0deg, #9EC43C -86.67%, #2E8B57 176.67%);
+}
 /* Gradient BG Graphics */
 .gradient-bg-graphics {
     pointer-events: none;
@@ -100,6 +118,12 @@
     background-size: contain;
 }
 
+.cardHero .hero-section-card .position-relative.overflow-hidden.p-0.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+}
 .cards-grid .card-wrapper:nth-child(1) {
     left: 75px;
 }
@@ -165,6 +189,20 @@
     border-radius: 16px;
     z-index: -1;
 }
+.our-team-section {
+  background: linear-gradient(to bottom right, #fdfdfd, #f1f3f5);
+}
+
+.project-card img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
 
 /* Service Card Component */
 .service-card {
@@ -311,6 +349,7 @@
 
 .story {
     max-width: 258px;
+    max-height: 309px;
     width: 100%;
     background: #ffffff;
     border-radius: 15px;
@@ -329,6 +368,7 @@
     background: linear-gradient(137.12deg, rgba(164, 206, 59, 0.18) 0%, rgba(82, 197, 215, 0.18) 96.56%);
     z-index: -1;
     pointer-events: none;
+    
 }
 
 .mb-n-60 {
@@ -458,6 +498,9 @@
     width: 100%;
     background: linear-gradient(180deg, #FFFFFF 21.35%, rgba(255, 255, 255, 0) 100%)
 }
+
+
+/* Portfolio CSS */
 
 /* Media Queries */
 @media only screen and (max-width:1200px) {

@@ -12,7 +12,7 @@ function Header() {
     <Navbar
       collapseOnSelect
       expand="lg"
-      className="header position-sticky top-0 bg-white py-1"
+      className="header position-sticky top-0  py-1"
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="p-0 m-0">

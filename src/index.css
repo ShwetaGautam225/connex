@@ -81,22 +81,6 @@ a {
     height: 110px;
 }
 
-.nav-link-custom {
-  position: relative;
-  color: #212529;
-  text-decoration: none;
-}
-
-.nav-link-custom.active::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 36px;
-  height: 2px;
-  background:linear-gradient(0deg, #9EC43C -86.67%, #2E8B57 176.67%);
-}
 
 /* Media Queries */
 /* @media (min-width: 1366px) {
@@ -124,7 +108,7 @@ a {
         min-width: 510px !important;
     }
     .hero-section-card {
-    height: 225px !important; 
+    height: 220px !important;
     width: 190px !important;
 }
 }
