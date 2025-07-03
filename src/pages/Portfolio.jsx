@@ -1,10 +1,12 @@
 import { Testimonials } from "../sections";
-import { Hero } from "../sections/portfolio";
+import { Hero, ProjectShowcase ,SliderSection} from "../sections/portfolio";
 
 const Portfolio = () => {
   return (
     <>
       <Hero />
+      <SliderSection />
+      <ProjectShowcase />
       <Testimonials />
     </>
   );

@@ -4,10 +4,23 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import { Link } from "react-router-dom";
 import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef } from 'react';
 
 function Header() {
   const location = useLocation();
+ const oRef = useRef();
 
+  useEffect(() => {
+    const onScroll = () => {
+      const angle = window.scrollY;
+      if (oRef.current) {
+        oRef.current.style.transform = `rotate(${angle}deg)`;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   return (
     <Navbar
       collapseOnSelect
@@ -16,13 +29,24 @@ function Header() {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="p-0 m-0">
-          <img
+          {/* <img
+          ref={logoRef}
             src="/logo.svg"
             alt="Connex Infotech"
+            style={{ transition: 'transform 0.2s ease' }}
             className="img-fluid h-auto w-100"
             height={93}
             width={218}
-          />
+          /> */}
+              <div style={{ position: 'relative', display: 'inline-block' }}>
+      <img src="/logo-img.svg" alt="Connex Infotech" />
+      <img
+        ref={oRef}
+        src="/icon-o.svg"
+        alt="Rotating O"
+        className="logo-rotate"
+      />
+    </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="pb-4 pb-lg-0" id="responsive-navbar-nav">
