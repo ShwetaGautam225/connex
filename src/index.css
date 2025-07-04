@@ -41,7 +41,7 @@ a {
 }
 
 .h2 {
-    font-size: 60px;
+    font-size: 50px;
     color: #212529;
 }
 
@@ -131,7 +131,7 @@ a {
         padding: 20px 35px;
     }
       .list-unstyled span{
-        font-size: 16px !important;
+        font-size: 16px ;
     }
 }
 

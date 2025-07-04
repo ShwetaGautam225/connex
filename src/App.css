@@ -464,11 +464,55 @@
 }
 
 .contact-form .form-field.mobile select {
-    min-width: 100px;
+    max-width: 100px;
+    padding: 18px 0 18px 52px !important;
+}
+
+.contact-form .form-field select {
+    width: 100%;
     background: #F6F8FC99;
     border: 0;
     border-right: 1px solid #C2D1D94D;
-    padding: 16px 20px;
+    padding: 18px 20px;
+}
+
+.contact-form .form-field.mobile select {
+    max-width: 100px;
+}
+
+select:focus {
+    outline: none;
+}
+
+select option {
+    background-color: #fff;
+    color: #393D41;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: 'pointer';
+    border: none;
+    box-shadow: 0 0 10px;
+}
+
+
+.bgContact {
+    backdrop-filter: blur(24.799999237060547px);
+    background: #9EC43D80;
+}
+
+.bgContact {
+    backdrop-filter: blur(24.8px);
+    /* optional, gives blur effect */
+    background-color: rgba(158, 196, 61, 0.5);
+    /* equivalent to #9EC43D80 */
+}
+
+img.flagImg {
+    width: 35px;
+    position: absolute;
+    margin-right: 5px;
+    left: 15px;
 }
 
 .contact-form textarea {
@@ -586,6 +630,103 @@
 }
 
 /* Intership CSS */
+.text-normal {
+    max-width: 689px;
+}
+
+.text-normal p {
+    color: #334055;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -2%;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.fit-img-area {
+    margin-top: -100px;
+}
+
+.image-stack {
+    position: relative;
+    margin: auto;
+}
+
+.top-image {
+    z-index: 1;
+    position: relative;
+}
+
+.bottom-image {
+    position: absolute;
+    bottom: -190px;
+    right: 0;
+    z-index: 2;
+}
+
+.certificate-image {
+    position: absolute;
+    bottom: -118px;
+    right: 42px;
+    z-index: 2;
+}
+
+.custom-gradient-box {
+    width: 100%;
+    /* or 403px if fixed */
+    max-width: 403px;
+    height: 290px;
+    border-radius: 5px;
+    /* approx. 4.96px */
+    background: linear-gradient(135deg, #8D3ACB, #3182D0);
+    opacity: 0.92;
+    /* 8% fade is not opacity, but if needed add transparency */
+    box-shadow:
+        inset 2.48px -2.48px 4.96px rgba(33, 37, 41, 0.25),
+        /* inner shadow */
+        3.3px 3.3px 9.91px rgba(0, 0, 0, 0.25);
+    /* drop shadow */
+}
+
+.roadmap-box {
+    background: #f8f9fa;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    min-height: 250px;
+}
+
+.roadmap-badge {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.bg-gradient-light {
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
+}
+
+.bg-gradient-lightgreen {
+    background: linear-gradient(135deg, #e9fdf0, #ffffff);
+}
+
+
+/* Responsive fix for small screens */
+@media (max-width: 768px) {
+    .bottom-image {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
 
 /* Media Queries */
 @media only screen and (max-width:1200px) {
@@ -648,10 +789,82 @@
     }
 }
 
+.navbar-toggler {
+    background-color: #F3F3F3;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-box {
+    background: linear-gradient(135deg, #9ec43d, #3dc4b0);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 300px;
+    position: relative;
+}
+
+.mobile-nav-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.mobile-nav-link {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+}
+
+.mobile-nav-link.active {
+    font-weight: 700;
+}
+
 @media only screen and (max-width:767px) {
+    .text-normal {
+        width: 100%;
+    }
+
     .navbar-brand img {
-        height: 82px !important;
-        width: 190px !important;
+        height: 82px;
+        width: 190px;
+    }
+
+    .logo-rotate {
+        width: 34px !important;
+        position: absolute;
+        top: 5.04px;
+        left: 27px;
+        transition: 'transform 300ms ease', ;
+        -webkit-transition: 'transform 300ms ease', ;
+        -moz-transition: 'transform 300ms ease', ;
+        -ms-transition: 'transform 300ms ease', ;
+        -o-transition: 'transform 300ms ease', ;
     }
 
     .description-box {
@@ -716,6 +929,8 @@
 
     .stories-container {
         gap: 5%;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .story {
@@ -744,8 +959,26 @@
     .contact-form .form-field.mobile select {
         height: 28px;
         font-size: 9px;
-        min-width: 65px;
+        max-width: 85px;
         padding: 2px 10px;
+    }
+
+    img.flagImg {
+        width: 25px;
+    }
+
+    fit-img-area {
+        margin-top: 0;
+    }
+
+    .text-normal p {
+        font-size: 11px;
+        line-height: 15.08px;
+        text-align: center;
+    }
+
+    .contact-form .form-field.mobile select {
+        padding-left: 40px;
     }
 
     .contact-icon-list .icon {

@@ -193,6 +193,7 @@ const ContactForm = () => {
                 </div>
 
                 <div className="form-field mobile d-flex align-items-center position-relative">
+                  <img src="/internship/flag.png" className="img-fluid flagImg" />
                   <select name="country-codes">
                     <option value="+91" selected>
                       +91
